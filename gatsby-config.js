@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `김커피 T.I.L`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `김커피`,
+      summary: `개발을 야매로 배워서 고생중인 야매개발자`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Today Coffee Kim Learned`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    // social: {
+    //   twitter: `kylemathews`,
+    // },
   },
   plugins: [
     {
@@ -60,8 +60,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Coffee Kim's T.I.L.`,
+        short_name: `coffekim blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
