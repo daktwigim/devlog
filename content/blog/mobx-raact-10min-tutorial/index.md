@@ -1,5 +1,5 @@
 ---
-title: [번역] Mobx와 React를 위한 10분 안내서 (1)
+title: "[번역] Mobx와 React를 위한 10분 안내서 (1)"
 date: "2020-11-25T18:00:00.000Z"
 description: "Mobx와 React를 위한 10분 안내서"
 ---
