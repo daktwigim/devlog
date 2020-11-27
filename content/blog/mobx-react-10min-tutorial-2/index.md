@@ -58,7 +58,7 @@ todoStore.todos[0].task = "grok MobX tutorial";
 console.log(todoStore.report());
 ```
 
-Console log
+결과:
 ```
 Next todo: "read MobX tutorial". Progress: 0/1
 Next todo: "read MobX tutorial". Progress: 0/2
