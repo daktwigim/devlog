@@ -10,7 +10,7 @@ description: "Mobx와 React를 위한 10분 안내서"
 
 다행히도 Mobx가 하는 일이 바로 그것입니다. 상태에 의존적인 코드를 자동으로 실행합니다. 그렇게 `report` 함수가 자동적으로 업데이트 되도록합니다, 마치 스프레드 시트의 차트처럼 말이죠. 그러기위해서는 `TodoStore`를 *관찰가능((observable)*하게 만들어 Mobx가 모든 변경사항을 추적할 수 있도록 만들어야합니다. 그렇게 되도록 클래스를 변경해봅시다.
 
-또한 `completedTodosCount` 속성(property)도 할일 목록에 따라 자동적으로 값을 얻게 됩니다. `observable`와 `computed` 어노테이션(annotation)을 사용해서 객체에 관찰가능한 속성을 만들 수 있습니다. 아래 예제에서는 `makeObservable`을 사용하여 어노테이션을 명시했지만, `makeAutoObservable(this)`를 사용해서 더 간단하게 작성할 수도 있습니다.
+또한 `completedTodosCount` 속성(property)도 todo 목록에 따라 자동적으로 값을 얻게 됩니다. `observable`와 `computed` 어노테이션(annotation)을 사용해서 객체에 관찰가능한 속성을 만들 수 있습니다. 아래 예제에서는 `makeObservable`을 사용하여 어노테이션을 명시했지만, `makeAutoObservable(this)`를 사용해서 더 간단하게 작성할 수도 있습니다.
 
 ```javascript
 class ObservableTodoStore {
@@ -76,4 +76,4 @@ Next todo: "try MobX". Progress: 1/2
 Next todo: "try MobX in own project". Progress: 1/2
 ```
 
-괜찮지 않나요? `report`가 누락되는 값 없이 자동적, 동기적으로 실행되었습니다. 로그를 자세히 보면, 동작의 5번째 줄에 대한 로그가 없습니다. 왜냐하면 두번째 할일의 이름이 변경되기는 했지만 그 변경사항이 report에 직접적인 영향을 미치지 않았기 때문입니다.(역주: 5번째 줄을 실행한 후에 report를 출력해보면, 결과의 4번째 줄과 동일합니다.) 반면에 첫 할일의 이름이 변경되면 report는 영향을 받습니다. 단순히 `todos`가 변경되거나 그 안의 속성이 변경된다고 해서 `autorun`이 실행되지 않는다는 말입니다.
+괜찮지 않나요? `report`가 누락되는 값 없이 자동적, 동기적으로 실행되었습니다. 로그를 자세히 보면, 동작의 5번째 줄에 대한 로그가 없습니다. 왜냐하면 두번째 todo의 이름이 변경되기는 했지만 그 변경사항이 report에 직접적인 영향을 미치지 않았기 때문입니다.(역주: 5번째 줄을 실행한 후에 report를 출력해보면, 결과의 4번째 줄과 동일합니다.) 반면에 첫 todo의 이름이 변경되면 report는 영향을 받습니다. 단순히 `todos`가 변경되거나 그 안의 속성이 변경된다고 해서 `autorun`이 실행되지 않는다는 말입니다.
